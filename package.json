@@ -6,9 +6,9 @@
   "license": "MIT",
   "scripts": {
     "start": "npx hardhat node",
-    "docker:build": "docker build -t hardhat-docker .",
-    "docker:run": "docker run -p 8545:8545 -it --rm hardhat-docker",
-    "docker:push": "docker tag hardhat-docker nexeth/hardhat-docker:latest && docker push nexeth/hardhat-docker:latest"
+    "docker:build": "docker build -t nexeth/hardhat .",
+    "docker:run": "docker run -p 8545:8545 -it --rm nexeth/hardhat",
+    "docker:push": "docker tag nexeth/hardhat nexeth/hardhat:latest && docker push nexeth/hardhat:latest"
   },
   "devDependencies": {
     "hardhat": "^2.19.5",

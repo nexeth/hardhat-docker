@@ -7,8 +7,10 @@
   "scripts": {
     "start": "npx hardhat node",
     "docker:build": "docker build -t nexeth/hardhat .",
+    "docker:pull": "docker pull nexeth/hardhat:latest",
+    "docker:push": "docker tag nexeth/hardhat nexeth/hardhat:latest && docker push nexeth/hardhat:latest",
     "docker:run": "docker run -p 8545:8545 -it --rm nexeth/hardhat",
-    "docker:push": "docker tag nexeth/hardhat nexeth/hardhat:latest && docker push nexeth/hardhat:latest"
+    "docker:run:latest": "docker run -p 8545:8545 -it --rm nexeth/hardhat:latest"
   },
   "devDependencies": {
     "hardhat": "^2.19.5",
